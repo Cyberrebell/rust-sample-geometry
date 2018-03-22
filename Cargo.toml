@@ -1,0 +1,10 @@
+[package]
+name = "sample-geometry"
+version = "0.1.0"
+authors = ["Cyberrebell"]
+
+[[bin]]
+name = "app"
+path = "src/main.rs"
+
+[dependencies]

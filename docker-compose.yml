@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+  app:
+    image: rust-sample-geometry-app
+    build: .
+  build:
+    image: rust-sample-geometry-build
+    build:
+     context: .
+     target: build
+    volumes:
+      - .:/run
+    command: cargo build

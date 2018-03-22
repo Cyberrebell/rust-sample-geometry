@@ -1,0 +1,7 @@
+/.*
+!/.gitignore
+!/.dockerignore
+/target
+**/*.rs.bk
+
+/*.iml
