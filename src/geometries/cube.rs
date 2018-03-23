@@ -1,9 +1,17 @@
+use geometries::object::Object;
+
 pub struct Cube {
     pub a: f64
 }
 
-impl Cube {
-    pub fn get_volume(self: Cube) -> f64 {
-        return self.a * self.a * self.a;
+impl Object for Cube {
+    const OBJECT_TYPE: &'static str = "Cube";
+
+    fn get_volume(self: &Cube) -> f64 {
+        return self.a.powi(3);
+    }
+
+    fn get_surface_area(self: &Cube) -> f64 {
+        return self.a.powi(2) * 6.0;
     }
 }

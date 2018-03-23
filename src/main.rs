@@ -1,8 +1,13 @@
 mod geometries;
-pub use geometries::cube;
+use geometries::object::Object;
 
 fn main() {
 	let my_cube = geometries::cube::Cube { a: 16.7 };
+	my_cube.print();
 
-	println!("My cube volume is {}", my_cube.get_volume());
+	let my_sphere = geometries::sphere::Sphere { d: 16.7 };
+	my_sphere.print();
+
+	let my_pyramid = geometries::pyramid::Pyramid { a: 16.7, h: 10.8 };
+	my_pyramid.print();
 }
